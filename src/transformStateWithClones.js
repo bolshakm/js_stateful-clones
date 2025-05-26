@@ -32,7 +32,7 @@ function transformStateWithClones(state, actions) {
         delete stateClone[v];
       }
     }
-    stateHystory.push(stateClone);
+    stateHystory.push({ ...stateClone });
     stateClone = { ...stateClone };
   }
 
